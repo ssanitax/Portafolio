@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Sánchez | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --silver:#C7CCD6;
+    --graphite:#1C1F26;
+    --dark-gray:#333333;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f4f5f7;
+    color:#111;
+    overflow-x:hidden;
+}
+
+/* NAV */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h3{
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:25px;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:var(--dark-gray);
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    padding:140px 10% 120px 10%;
+    background:url('hero.png') center/cover no-repeat;
+    color:white;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.8));
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    font-weight:800;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:var(--silver);
+    font-weight:400;
+}
+
+.hero p{
+    font-size:1.15rem;
+    opacity:0.85;
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    font-size:2rem;
+    margin-bottom:40px;
+    position:relative;
+    text-align:center;
+}
+
+section h2::after{
+    content:"";
+    width:60px;
+    height:4px;
+    background:var(--dark-gray);
+    position:absolute;
+    bottom:-12px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* ABOUT centrado */
+
+.about-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.about-box{
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.06);
+    color: var(--dark-gray);
+    max-width:700px;
+}
+
+.about-box p{
+    line-height:1.7;
+}
+
+/* PROJECTS */
+
+.project-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    margin-bottom:80px;
+}
+
+.project-row:nth-child(even){
+    direction:rtl;
+}
+
+.project-row:nth-child(even) .project-text{
+    direction:ltr;
+}
+
+.project-image{
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 15px 30px rgba(0,0,0,0.06);
+    max-width:520px;
+    transition:0.6s ease;
+}
+
+.project-image img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+    transition:0.6s ease;
+}
+
+.project-image:hover img{
+    transform:scale(1.05);
+}
+
+.project-text{
+    max-width:450px;
+}
+
+.project-text h3{
+    font-size:1.6rem;
+    margin-bottom:12px;
+    color:var(--dark-gray);
+}
+
+.project-text p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+.tech{
+    font-size:0.9rem;
+    color:var(--dark-gray);
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+/* Botones de proyecto */
+
+.project-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.project-buttons a{
+    padding:10px 22px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:500;
+    border:1px solid var(--graphite);
+    color:var(--graphite);
+    transition:0.3s ease;
+    font-size:0.9rem;
+}
+
+.project-buttons a:hover{
+    background:var(--graphite);
+    color:white;
+}
+
+/* CONTACT */
+
+.contact-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.btn{
+    padding:14px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:500;
+    border:1px solid var(--graphite);
+    color:var(--graphite);
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    background:var(--graphite);
+    color:white;
+}
+
+.btn-primary{
+    background:var(--graphite);
+    color:white;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:var(--dark-gray);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:white;
+    color:#777;
+}
+
+/* ANIMACIONES */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 0.7s ease;
+}
+
+.fade-up.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .project-row{
+        grid-template-columns:1fr;
+        direction:ltr !important;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Ana Sánchez Suárez</h1>
+    <div>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-content fade-up">
+        <h1>
+            Desarrollo de Aplicaciones Multiplataforma<br>
+            <span>Marketing y Publicidad</span>
+        </h1>
+        <p>
+            Estudiante de Desarrollo de Aplicaciones Multiplataforma - Técnica de Marketing y Publicidad.
+        </p>
+    </div>
+</div>
+
+<section id="about">
+    <h2>Sobre mí</h2>
+    <div class="about-wrapper fade-up">
+        <div class="about-box">
+            <p>Soy una persona creativa, curiosa y resolutiva, con ganas de seguir creciendo en el mundo tecnológico.</p>
+            <p>-</p>
+            <p>Antes de programar, trabajé en marketing y posicionamiento SEO, así que combino la estrategia digital con la lógica del desarrollo.</p>
+            <p>-</p>
+            <p>🎓 Estudiante de DAM - ⚙️ Formación previa en Marketing y Publicidad - 🧩 Experiencia en WordPress, SEMrush, SEO y copywriting - 🚀 Interesada en el desarrollo web y móvil y en mejorar la experiencia de usuario</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Proyectos</h2>
+
+    <div class="project-row fade-up">
+        <div class="project-image">
+            <img src="proyecto1.jpg">
+        </div>
+        <div class="project-text">
+            <h3>Proyecto 1</h3>
+            <p>Aplicación web académica desarrollada con enfoque estructural y visual.</p>
+            <div class="tech">HTML · CSS · JavaScript</div>
+            <div class="project-buttons">
+                <a href="#" target="_blank">Ver proyecto</a>
+                <a href="#" target="_blank">Ver código</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-row fade-up">
+        <div class="project-image">
+            <img src="proyecto2.jpg">
+        </div>
+        <div class="project-text">
+            <h3>Proyecto 2</h3>
+            <p>Sistema funcional con lógica backend y base de datos.</p>
+            <div class="tech">Python · SQL</div>
+            <div class="project-buttons">
+                <a href="#" target="_blank">Ver proyecto</a>
+                <a href="#" target="_blank">Ver código</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-row fade-up">
+        <div class="project-image">
+            <img src="proyecto3.jpg">
+        </div>
+        <div class="project-text">
+            <h3>Proyecto 3</h3>
+            <p>Prototipo UI/UX centrado en experiencia y microinteracciones.</p>
+            <div class="tech">Figma · Diseño de interfaz</div>
+            <div class="project-buttons">
+                <a href="#" target="_blank">Ver proyecto</a>
+                <a href="#" target="_blank">Ver código</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Contacto</h2>
+    <div class="contact-buttons fade-up">
+        <a href="mailto:ssanitax@gmail.com" target="_blank" class="btn">Email</a>
+        <a href="https://www.linkedin.com/in/ana-s%C3%A1nchez-su%C3%A1rez-348660240/" target="_blank" class="btn">LinkedIn</a>
+        <a href="https://github.com/ssanitax" target="_blank" class="btn">GitHub</a>
+        <a href="https://ssanitax.github.io/Curriculum/" target="_blank" class="btn btn-primary">Ver CV</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Ana Sánchez Suárez
+</footer>
+
+<script>
+const elements = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
+},{threshold:0.2});
+elements.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
