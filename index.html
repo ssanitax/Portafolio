@@ -41,11 +41,6 @@ nav{
     z-index:1000;
 }
 
-nav h3{
-    font-weight:800;
-    letter-spacing:1px;
-}
-
 nav a{
     text-decoration:none;
     color:#333;
@@ -134,7 +129,7 @@ section h2::after{
     transform:translateX(-50%);
 }
 
-/* ABOUT centrado */
+/* ABOUT */
 
 .about-wrapper{
     display:flex;
@@ -164,6 +159,13 @@ section h2::after{
     gap:60px;
     align-items:center;
     margin-bottom:80px;
+    padding-bottom:60px;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.project-row:last-child{
+    border-bottom:none;
+    padding-bottom:0;
 }
 
 .project-row:nth-child(even){
@@ -176,8 +178,8 @@ section h2::after{
 
 .project-image{
     width:100%;
-    max-width:480px;              /* tamaño más elegante en desktop */
-    aspect-ratio:16 / 9;          /* proporción pantalla ordenador */
+    max-width:480px;
+    aspect-ratio:16 / 9;
     border-radius:16px;
     overflow:hidden;
     box-shadow:0 15px 30px rgba(0,0,0,0.06);
@@ -188,7 +190,7 @@ section h2::after{
 .project-image img{
     width:100%;
     height:100%;
-    object-fit:cover;             /* mantiene proporción sin deformar */
+    object-fit:cover;
     display:block;
     transition:0.6s ease;
 }
@@ -218,8 +220,6 @@ section h2::after{
     font-weight:600;
     margin-bottom:15px;
 }
-
-/* Botones de proyecto */
 
 .project-buttons{
     display:flex;
@@ -306,36 +306,21 @@ footer{
     .project-row{
         grid-template-columns:1fr;
         direction:ltr !important;
+        gap:30px;
     }
 
     .project-image{
-        order:1;
         max-width:100%;
     }
 
     .project-text{
-        order:2;
+        max-width:100%;
     }
 
     .hero h1{
         font-size:2.5rem;
     }
 
-}
-
-.project-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-    margin-bottom:80px;
-    padding-bottom:60px;
-    border-bottom:1px solid #d9d9d9; /* línea fina gris */
-}
-
-.project-row:last-child{
-    border-bottom:none;
-    padding-bottom:0;
 }
 
 </style>
