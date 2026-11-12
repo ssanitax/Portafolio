@@ -73,7 +73,7 @@ img { display: block; max-width: 100%; }
 }
 
 .wrap {
-  width: min(1120px, calc(100% - 2rem));
+  width: min(1280px, calc(100% - 1.5rem));
   margin-inline: auto;
 }
 
@@ -99,7 +99,7 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(1120px, calc(100% - 2rem));
+  width: min(1280px, calc(100% - 1.5rem));
 }
 
 .brand {
@@ -223,7 +223,7 @@ img { display: block; max-width: 100%; }
 .hero-content {
   position: relative;
   z-index: 1;
-  width: min(1120px, calc(100% - 2rem));
+  width: min(1280px, calc(100% - 1.5rem));
   margin-inline: auto;
   padding: calc(var(--nav-h) + 3rem) 0 3rem;
   display: grid;
@@ -511,8 +511,8 @@ img { display: block; max-width: 100%; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.1rem 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem 0.85rem;
 }
 
 .work {
@@ -579,9 +579,9 @@ img { display: block; max-width: 100%; }
   content: attr(data-num);
   position: absolute;
   right: 0;
-  top: -0.55rem;
+  top: -0.4rem;
   font-family: "Fraunces", serif;
-  font-size: 3.4rem;
+  font-size: 2.6rem;
   line-height: 1;
   letter-spacing: -0.05em;
   color: rgba(250, 251, 248, 0.05);
@@ -614,17 +614,17 @@ img { display: block; max-width: 100%; }
 .work h3 {
   font-family: "Fraunces", serif;
   font-weight: 500;
-  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
 
 .work p {
   color: rgba(250, 251, 248, 0.68);
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   font-weight: 300;
   line-height: 1.45;
-  max-width: 40ch;
+  max-width: none;
 }
 
 .work-links {
@@ -781,8 +781,8 @@ img { display: block; max-width: 100%; }
   }
 
   .work-board {
-    grid-template-columns: 1fr;
-    gap: 1.4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem 0.75rem;
   }
 }
 
@@ -824,6 +824,11 @@ img { display: block; max-width: 100%; }
   .about-list li {
     grid-template-columns: 1fr;
     gap: 0.15rem;
+  }
+
+  .work-board {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
   }
 
   .work-meta {
