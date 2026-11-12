@@ -546,22 +546,6 @@ section { padding: clamp(1.75rem, 3.5vw, 2.6rem) 0; }
   margin-top: 0.25rem;
 }
 
-.work-soon .work-media {
-  background: linear-gradient(145deg, #2a332e, #1a3f31 55%, #121814);
-}
-
-.work-soon .work-media::before {
-  content: "En curso";
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-family: "Fraunces", serif;
-  font-size: 1.05rem;
-  color: rgba(250, 251, 248, 0.55);
-  letter-spacing: -0.02em;
-}
-
 /* —— CONTACT —— */
 .contact { padding-bottom: clamp(2.75rem, 6vw, 4rem); }
 
@@ -845,19 +829,56 @@ section { padding: clamp(1.75rem, 3.5vw, 2.6rem) 0; }
 
         <article class="work">
           <div class="work-media" aria-hidden="true">
-            <img src="aniway.png" alt="" width="1365" height="747" loading="lazy">
+            <img src="aseopdf.png" alt="" width="1440" height="900" loading="lazy">
           </div>
           <div class="work-shade"></div>
           <div class="work-body">
             <div class="work-top">
               <span class="work-num">02</span>
+              <span class="work-tech">HTML · CSS · JavaScript</span>
+            </div>
+            <h3>AseoPDF</h3>
+            <p>Suite para organizar, editar y convertir PDFs en el navegador, sin subir archivos a ningún servidor.</p>
+            <div class="work-links">
+              <a class="btn btn-primary btn-arrow" href="https://ssanitax.github.io/AseoPDF/" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+              <a class="btn btn-soft" href="https://github.com/ssanitax/AseoPDF" target="_blank" rel="noopener noreferrer">Código</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work-media" aria-hidden="true">
+            <img src="simulador_gestos_fumar.png" alt="" width="1440" height="900" loading="lazy">
+          </div>
+          <div class="work-shade"></div>
+          <div class="work-body">
+            <div class="work-top">
+              <span class="work-num">03</span>
+              <span class="work-tech">Three.js · MediaPipe · Vite</span>
+            </div>
+            <h3>Mechero y cigarro</h3>
+            <p>Escena 3D controlada con la cámara: gestos de manos y cara para encender, fumar y apagar.</p>
+            <div class="work-links">
+              <a class="btn btn-primary btn-arrow" href="https://ssanitax.github.io/simulador_gestos_fumar/" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+              <a class="btn btn-soft" href="https://github.com/ssanitax/simulador_gestos_fumar" target="_blank" rel="noopener noreferrer">Código</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work-media" aria-hidden="true">
+            <img src="aniway.png" alt="" width="1365" height="747" loading="lazy">
+          </div>
+          <div class="work-shade"></div>
+          <div class="work-body">
+            <div class="work-top">
+              <span class="work-num">04</span>
               <span class="work-tech">Python · Flask · JS</span>
             </div>
             <h3>AniWay</h3>
-            <p>Calculadora de gastos de viaje que reparte el coste por persona según grupos y kilómetros.</p>
+            <p>Calculadora de gastos de viaje que reparte el coste por persona según grupos y kilómetros. Sin demo online: el repo incluye todo para abrirlo en local.</p>
             <div class="work-links">
-              <a class="btn btn-primary btn-arrow" href="https://aniway-wine.vercel.app/" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-              <a class="btn btn-soft" href="https://github.com/ssanitax/AniWay" target="_blank" rel="noopener noreferrer">Código</a>
+              <a class="btn btn-primary btn-arrow" href="https://github.com/ssanitax/AniWay" target="_blank" rel="noopener noreferrer">Ver código y arrancar en local</a>
             </div>
           </div>
         </article>
@@ -869,7 +890,7 @@ section { padding: clamp(1.75rem, 3.5vw, 2.6rem) 0; }
           <div class="work-shade"></div>
           <div class="work-body">
             <div class="work-top">
-              <span class="work-num">03</span>
+              <span class="work-num">05</span>
               <span class="work-tech">HTML · CSS · JS</span>
             </div>
             <h3>Adivina el Número</h3>
@@ -888,7 +909,7 @@ section { padding: clamp(1.75rem, 3.5vw, 2.6rem) 0; }
           <div class="work-shade"></div>
           <div class="work-body">
             <div class="work-top">
-              <span class="work-num">04</span>
+              <span class="work-num">06</span>
               <span class="work-tech">JS · Canvas</span>
             </div>
             <h3>Colisión de NPCs</h3>
@@ -896,22 +917,6 @@ section { padding: clamp(1.75rem, 3.5vw, 2.6rem) 0; }
             <div class="work-links">
               <a class="btn btn-primary btn-arrow" href="https://ssanitax.github.io/simulacion_NPCs/" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
               <a class="btn btn-soft" href="https://github.com/ssanitax/simulacion_NPCs" target="_blank" rel="noopener noreferrer">Código</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="work work-soon">
-          <div class="work-media" aria-hidden="true"></div>
-          <div class="work-shade"></div>
-          <div class="work-body">
-            <div class="work-top">
-              <span class="work-num">05</span>
-              <span class="work-tech">Figma · UI / UX</span>
-            </div>
-            <h3>Prototipo de interfaz</h3>
-            <p>Exploración de microinteracciones. Todavía en el taller.</p>
-            <div class="work-links">
-              <a class="btn btn-primary btn-arrow" href="proximamente.html">Seguir</a>
             </div>
           </div>
         </article>
